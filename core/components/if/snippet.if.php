@@ -100,6 +100,9 @@ if (isset($subject)) {
             default:
                 $output = (($subject == $operand) ? $then : (isset($else) ? $else : ''));
                 break;
+            case 'isodd':
+                $output = (($subject % 2) ? $then : (isset($else) ? $else : ''));
+            break;
         }
     }
 }
